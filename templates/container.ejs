@@ -8,8 +8,8 @@ import styles from './<%= props.name %>Style';
 const <%= props.name %> = () => {
   const counter = useSelector(state => state.counter);
   const dispatch = useDispatch();
-  const increment = () => useCallback(() => dispatch(CounterActions.increment()), [dispatch]);
-  const decrement = () => useCallback(() => dispatch(CounterActions.decrement()), [dispatch]);
+  const increment = useCallback(() => dispatch(CounterActions.increment()), [dispatch]);
+  const decrement = useCallback(() => dispatch(CounterActions.decrement()), [dispatch]);
 
   return (
     <ScrollView style={styles.container}>
