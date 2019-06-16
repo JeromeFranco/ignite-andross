@@ -33,15 +33,19 @@ module.exports = {
     const jobs = [
       {
         template: 'component.ejs',
-        target: `App/Components/${relativePath}${name}.js`
+        target: `App/Components/${name}/${name}.js`
       },
       {
         template: 'component-style.ejs',
-        target: `App/Components/${relativePath}Styles/${name}Style.js`
+        target: `App/Components/${name}/${name}Style.js`
+      },
+      {
+        template: 'component-index.ejs',
+        target: `App/Components/${name}/index.js`
       },
       tests === 'ava' && {
         template: 'component-test.ejs',
-        target: `Test/Components/${relativePath}${name}Test.js`
+        target: `Test/Components/${name}/${name}Test.js`
       }
     ]
 

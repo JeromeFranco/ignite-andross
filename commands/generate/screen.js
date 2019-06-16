@@ -22,11 +22,15 @@ module.exports = {
     const jobs = [
       {
         template: `screen.ejs`,
-        target: `App/Containers/${screenName}.js`
+        target: `App/Containers/${screenName}/${screenName}.js`
       },
       {
         template: `screen-style.ejs`,
-        target: `App/Containers/Styles/${screenName}Style.js`
+        target: `App/Containers/${screenName}/${screenName}Style.js`
+      },
+      {
+        template: `component-index.ejs`,
+        target: `App/Containers/${screenName}/index.js`
       }
     ]
 
